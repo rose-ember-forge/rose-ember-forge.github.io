@@ -69,7 +69,7 @@ h2 { border-bottom: 0 !important; }
   display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .06em;
   text-transform: uppercase; padding: .18rem .55rem; border-radius: 999px;
   &.done     { background: rgba($red, .15); color: $red-soft; border: 1px solid rgba($red, .5); }
-  &.progress { background: rgba($grey-mid, .12); color: $grey-mid; border: 1px dashed $grey-mid; }
+  &.wip     { background: rgba($grey-mid, .12); color: $grey-mid; border: 1px dashed $grey-mid; }
 }
 .tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1rem; }
 .tag {

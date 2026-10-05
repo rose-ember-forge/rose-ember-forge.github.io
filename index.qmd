@@ -71,7 +71,7 @@ against the standard benchmark. A daily GitHub Action makes and scores a live fo
 :::
 
 ::: {.card-project}
-[In progress]{.status .progress}
+[In progress]{.status .wip}
 
 ### Project 3
 
@@ -83,7 +83,7 @@ Details coming soon.
 :::
 
 ::: {.card-project}
-[In progress]{.status .progress}
+[In progress]{.status .wip}
 
 ### Project 4
 
