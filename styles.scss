@@ -156,3 +156,7 @@ h2 { border-bottom: 0 !important; }
     a { overflow-wrap: anywhere; }
   }
 }
+.hero-actions a { white-space: nowrap; }
+@media (max-width: 720px) {
+  .hero-actions a { padding: .6rem .8rem; flex: 1 1 120px; }
+}
