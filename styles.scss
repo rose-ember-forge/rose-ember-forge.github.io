@@ -169,3 +169,7 @@ h2 { border-bottom: 0 !important; }
 @media (prefers-reduced-motion: reduce) {
   .fx-glow, .fx-ripple { display: none; }
 }
+
+// Tags: pandoc wraps the spans in a <p>, so lay that out as the wrapping row
+.tags > p { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; }
+.tag { white-space: nowrap; line-height: 1.5; }
