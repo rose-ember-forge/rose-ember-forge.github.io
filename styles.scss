@@ -132,3 +132,27 @@ h2 { border-bottom: 0 !important; }
 .timeline ul li:hover { border-left-color: $red; }
 .earlier ul li { padding: .9rem 0; border-bottom: 1px solid $line; }
 .earlier ul li:last-child { border-bottom: 0; }
+
+// ---------- Buttons and phone layout ----------
+.btn-red, .btn-outline { display: inline-block; line-height: 1.4; text-align: center; }
+.hero-actions > p {
+  display: flex; flex-wrap: wrap; gap: .75rem; margin: 0;
+}
+.cards { grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); }
+
+@media (max-width: 720px) {
+  .hero {
+    padding: 1.5rem 0 2rem;
+    img.avatar { width: 128px; height: 128px; }
+    .role { font-size: 1.02rem; }
+    .pitch { font-size: 1rem; text-align: left; }
+  }
+  .hero-actions > p { justify-content: center; }
+  .hero-actions a { flex: 1 1 140px; }
+  .section-title, section.section-title > h2 { font-size: 1.35rem; margin-top: 2.25rem; }
+  .card-project { padding: 1.1rem; }
+  .contact-list { font-size: 1rem;
+    li { padding: .85rem 1rem; }
+    a { overflow-wrap: anywhere; }
+  }
+}
