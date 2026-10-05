@@ -95,10 +95,10 @@ Details coming soon.
   [PyTorch model enforcing surface energy balance and Stokes flow constraints through the loss function.]{.meta}
 - **EEG-based human emotion recognition** (published paper, research team)<br>
   [Entropy measures as features for classifying emotions from EEG signals. [Read the paper](https://doi.org/10.1186/s40708-021-00141-5)]{.meta}
+- **3D hex colour cube inspector**<br>
+  [Interactive WebGL view of 4,096 hex colours in RGB space. [Code](https://github.com/rose-ember-forge/HEX-cube)]{.meta}
 - **Book recommendation web app** (team project)<br>
   [Flask app with TF-IDF sentiment analysis and genre prediction from book summaries.]{.meta}
 - **SpaceX launch analysis** (IBM Data Science capstone)<br>
   [Data from a REST API and web scraping, SQL and Folium/Plotly EDA, four classifiers compared.]{.meta}
-- **3D hex colour cube inspector**<br>
-  [Interactive WebGL view of 4,096 hex colours in RGB space. [Code](https://github.com/rose-ember-forge/HEX-cube)]{.meta}
 :::
