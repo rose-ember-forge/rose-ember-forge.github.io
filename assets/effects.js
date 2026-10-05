@@ -21,8 +21,13 @@
     hideTimer = setTimeout(function () { glow.classList.remove("on"); }, ms);
   }
 
-  // Mouse: follow the cursor, hide when it leaves the window
-  document.addEventListener("mousemove", function (e) { show(e.clientX, e.clientY); clearTimeout(hideTimer); });
+  // Mouse: glow only while the cursor moves, fade out shortly after it stops.
+  // pointermove with pointerType "mouse" ignores the fake mouse events phones fire after a tap.
+  document.addEventListener("pointermove", function (e) {
+    if (e.pointerType !== "mouse") return;
+    show(e.clientX, e.clientY);
+    hideSoon(250);
+  });
   document.documentElement.addEventListener("mouseleave", function () { hideSoon(0); });
 
   // Touch: follow the finger while touching or scrolling, then fade out
@@ -32,7 +37,8 @@
   document.addEventListener("touchmove", function (e) {
     var t = e.touches[0]; show(t.clientX, t.clientY);
   }, { passive: true });
-  document.addEventListener("touchend", function () { hideSoon(600); }, { passive: true });
+  document.addEventListener("touchend", function () { hideSoon(150); }, { passive: true });
+  document.addEventListener("touchcancel", function () { hideSoon(0); }, { passive: true });
 
   // Ripple: three thin rings spreading out and fading, like a drop on water
   document.addEventListener("pointerdown", function (e) {

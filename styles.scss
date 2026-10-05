@@ -144,7 +144,7 @@ h2 { border-bottom: 0 !important; }
   --fx-ripple: #{rgba($red, .55)};
 }
 .fx-glow {
-  position: fixed; left: 0; top: 0; width: 520px; height: 520px; margin: -260px 0 0 -260px;
+  position: fixed; left: 0; top: 0; width: 312px; height: 312px; margin: -156px 0 0 -156px;
   border-radius: 50%; pointer-events: none; z-index: 1500;
   mix-blend-mode: $glow-blend;
   background: radial-gradient(circle, var(--fx-glow) 0%, transparent 65%);
