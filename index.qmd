@@ -1,8 +1,6 @@
 ---
-title: "Raghunandan Rajkumar"
 pagetitle: "Raghunandan Rajkumar · Data Scientist"
 description: "Data scientist and analyst in Stockholm. Python, SQL, machine learning and clear reporting."
-title-block-style: none
 ---
 
 ::: {.hero}
