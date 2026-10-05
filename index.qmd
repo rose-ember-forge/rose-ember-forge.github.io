@@ -13,7 +13,7 @@ description: "Data scientist and analyst in Stockholm. Python, SQL, machine lear
 
 ::: {.pitch}
 Physicist turned data scientist. I turn messy, real-world data into clear answers: from ten years of
-Swedish job ads to EEG signals and climate simulations.
+Swedish job ads and Stockholm electricity prices to EEG signals and climate simulations.
 
 I work in Python and SQL, build models with scikit-learn and PyTorch, and report in Power BI and
 Streamlit. MSc in AI for Health from Stockholm University (2026). English (C1) and Swedish (B1/B2).
@@ -46,19 +46,27 @@ platforms and generative AI have replaced the old statistics toolkit; SQL stays 
 :::
 
 ::: {.card-links}
-[Code on GitHub →](https://github.com/rose-ember-forge/swedish-data-skill-trends)
+[Code on GitHub →](https://github.com/rose-ember-forge/Skill-Trends-in-Data-Jobs-in-Sweden)
 :::
 :::
 
 ::: {.card-project}
-[In progress]{.status .progress}
+![](assets/electricity-forecast.png){fig-alt="Model comparison: averaging LEAR and LightGBM cuts the forecast error by 44% against the naive benchmark"}
 
-### Project 2
+[Finished]{.status .done}
 
-Details coming soon.
+### Forecasting tomorrow's electricity price in Stockholm
+
+Hourly day-ahead price forecasts for SE3, backtested on a full year using only what was known before the
+noon auction. Averaging a Lasso model (LEAR) and LightGBM with weather forecasts cuts the error by 44%
+against the standard benchmark. A daily GitHub Action makes and scores a live forecast.
 
 ::: {.tags}
-[In progress]{.tag}
+[Python]{.tag} [LightGBM]{.tag} [Lasso]{.tag} [Time series]{.tag} [Conformal intervals]{.tag} [DuckDB / SQL]{.tag} [Streamlit]{.tag}
+:::
+
+::: {.card-links}
+[Code on GitHub →](https://github.com/rose-ember-forge/Forecasting-Electricity-Prices-in-Stockholm)
 :::
 :::
 

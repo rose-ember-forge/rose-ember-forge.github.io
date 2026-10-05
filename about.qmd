@@ -46,7 +46,7 @@ check the edge cases, and explain the result so people can act on it.
 
 - **Languages:** Python, SQL, R, LaTeX, C
 - **Data science:** machine learning, deep learning, NLP, sentiment analysis, data visualisation
-- **Tools:** pandas, scikit-learn, PyTorch, DuckDB, Power BI, Streamlit, Plotly, Folium, Git
+- **Tools:** pandas, scikit-learn, LightGBM, PyTorch, DuckDB, Power BI, Streamlit, Plotly, Folium, Git
 
 ## Certifications {.section-title}
 
