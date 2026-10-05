@@ -1,0 +1,26 @@
+/*-- scss:defaults --*/
+// Light palette: the dark one with black and white swapped
+$bg:         #f7f7f8;
+$ink:        #eeeef0;
+$panel:      #ffffff;
+$line:       #dcdce1;
+$grey-light: #2a2a2e;  // body text
+$grey-mid:   #62626a;  // secondary text
+$heading:    #0b0b0c;
+$red:        #c8102e;
+$red-dark:   #9c0c24;
+$red-soft:   #b00d28;
+$glow-blend: multiply;
+$glow-alpha: .10;
+
+$body-bg:    $bg;
+$body-color: $grey-light;
+$primary:    $red;
+$link-color: $red;
+$navbar-bg:  $bg;
+$navbar-fg:  $grey-light;
+$navbar-hl:  $red;
+$footer-bg:  $bg;
+$footer-fg:  $grey-mid;
+$headings-color: $heading;
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;

@@ -1,0 +1,26 @@
+/*-- scss:defaults --*/
+// Dark palette: black, red, grey
+$bg:         #0b0b0c;
+$ink:        #141416;
+$panel:      #1b1b1e;
+$line:       #2c2c31;
+$grey-light: #d6d6da;  // body text
+$grey-mid:   #9a9aa2;  // secondary text
+$heading:    #f2f2f4;
+$red:        #d7263d;
+$red-dark:   #a8192c;
+$red-soft:   #e85a6b;  // red text on red-tinted backgrounds
+$glow-blend: screen;
+$glow-alpha: .16;
+
+$body-bg:    $bg;
+$body-color: $grey-light;
+$primary:    $red;
+$link-color: $red;
+$navbar-bg:  $bg;
+$navbar-fg:  $grey-light;
+$navbar-hl:  $red;
+$footer-bg:  $bg;
+$footer-fg:  $grey-mid;
+$headings-color: $heading;
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;

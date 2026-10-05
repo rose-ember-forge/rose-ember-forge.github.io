@@ -3,6 +3,7 @@ project:
   output-dir: _site
   resources:
     - files/
+    - assets/effects.js
 
 website:
   title: "Raghunandan Rajkumar"
@@ -31,7 +32,12 @@ website:
 
 format:
   html:
-    theme: [darkly, styles.scss]
+    theme:
+      dark: [darkly, theme-dark.scss, styles.scss]
+      light: [flatly, theme-light.scss, styles.scss]
+    include-after-body:
+      text: |
+        <script src="/assets/effects.js"></script>
     toc: false
     page-layout: full
     smooth-scroll: true
