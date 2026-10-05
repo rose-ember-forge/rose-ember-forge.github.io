@@ -125,3 +125,10 @@ h2 { border-bottom: 0 !important; }
 
 .hero > p { margin: 0; flex-shrink: 0; }
 .hero-text { min-width: 0; }
+
+// Pandoc lists sit inside the styled divs
+.timeline ul, .earlier ul { list-style: none; padding-left: 0; margin: 0; }
+.timeline ul li { padding: .7rem 0 .7rem 1rem; border-left: 2px solid $line; margin-left: .3rem; }
+.timeline ul li:hover { border-left-color: $red; }
+.earlier ul li { padding: .9rem 0; border-bottom: 1px solid $line; }
+.earlier ul li:last-child { border-bottom: 0; }
