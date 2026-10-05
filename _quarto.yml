@@ -1,0 +1,38 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - files/
+
+website:
+  title: "Raghunandan Rajkumar"
+  description: "Data scientist and analyst in Stockholm. Python, SQL, machine learning and clear reporting."
+  site-url: "https://rose-ember-forge.github.io"
+  favicon: assets/avatar.svg
+  open-graph: true
+  navbar:
+    left:
+      - text: Projects
+        href: index.qmd#projects
+      - text: About
+        href: about.qmd
+      - text: Contact
+        href: contact.qmd
+    right:
+      - icon: github
+        href: https://github.com/rose-ember-forge
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/raghunandan-rajkumar
+        aria-label: LinkedIn
+  page-footer:
+    left: "© 2026 Raghunandan Rajkumar"
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme: [darkly, styles.scss]
+    toc: false
+    page-layout: full
+    smooth-scroll: true
+    link-external-newwindow: true
