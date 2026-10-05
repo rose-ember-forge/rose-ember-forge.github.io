@@ -6,7 +6,7 @@ title-block-style: none
 ---
 
 ::: {.hero}
-![](assets/avatar.svg){.avatar fig-alt="Avatar placeholder"}
+![](assets/avatar.png){.avatar fig-alt="Profile illustration: black suit with a red tie"}
 
 ::: {.hero-text}
 # Raghunandan Rajkumar

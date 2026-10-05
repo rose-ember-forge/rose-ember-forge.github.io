@@ -8,7 +8,7 @@ website:
   title: "Raghunandan Rajkumar"
   description: "Data scientist and analyst in Stockholm. Python, SQL, machine learning and clear reporting."
   site-url: "https://rose-ember-forge.github.io"
-  favicon: assets/avatar.svg
+  favicon: assets/favicon.png
   open-graph: true
   navbar:
     left:
