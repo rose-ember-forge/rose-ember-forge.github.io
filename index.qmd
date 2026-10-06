@@ -13,7 +13,7 @@ description: "Data scientist and analyst in Stockholm. Python, SQL, machine lear
 
 ::: {.pitch}
 Physicist turned data scientist. I turn messy, real-world data into clear answers: from ten years of
-Swedish job ads and Stockholm electricity prices to EEG signals and climate simulations.
+Swedish job ads, Stockholm electricity prices and SL bus delays to EEG signals and climate simulations.
 
 I work in Python and SQL, build models with scikit-learn and PyTorch, and report in Power BI and
 Streamlit. MSc in AI for Health from Stockholm University (2026). English (C1) and Swedish (B1/B2).
@@ -71,14 +71,22 @@ against the standard benchmark. A daily GitHub Action makes and scores a live fo
 :::
 
 ::: {.card-project}
-[In progress]{.status .wip}
+![](assets/sl-delays.png){fig-alt="Model comparison: SL plus history has a mean error of 67 seconds against 89 seconds for SL's own live prediction"}
 
-### Project 3
+[Finished]{.status .done}
 
-Details coming soon.
+### Why is my SL bus late?
+
+A year of Stockholm public transport (168 million departures) rebuilt from SL's archived real-time feed:
+two in three buses run on time against 96% of metro departures, and snow costs buses 6 points per 10 cm.
+A LightGBM model makes SL's own live delay predictions 25% more accurate.
 
 ::: {.tags}
-[In progress]{.tag}
+[Python]{.tag} [DuckDB / SQL]{.tag} [GTFS-Realtime]{.tag} [LightGBM]{.tag} [Geospatial]{.tag} [Statistical testing]{.tag} [Streamlit]{.tag}
+:::
+
+::: {.card-links}
+[Code on GitHub →](https://github.com/rose-ember-forge/SL-Delays)
 :::
 :::
 
