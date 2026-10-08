@@ -174,3 +174,43 @@ h2 { border-bottom: 0 !important; }
 .tags > p { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; }
 .tag { white-space: nowrap; line-height: 1.5; }
 .status { line-height: 1.5; vertical-align: middle; }
+
+// ---------- Opening ECG animation (assets/intro.js) ----------
+:root {
+  --intro-bg: #{$bg}; --intro-fg: #{$heading}; --intro-muted: #{$grey-mid}; --intro-red: #{$red};
+}
+html.intro-pending body::before {
+  content: ""; position: fixed; inset: 0; z-index: 2999; background: var(--intro-bg);
+}
+html.intro-playing { overflow: hidden; }
+.intro {
+  position: fixed; inset: 0; z-index: 3000;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem;
+  padding-inline: 16px;
+  background: var(--intro-bg); font-family: inherit;
+  transition: transform .6s cubic-bezier(.7, 0, .3, 1), opacity .25s ease;
+}
+.intro.exit { transform: translateY(-100%); }
+.intro.skip { opacity: 0; }
+.intro-mottos { display: flex; flex-direction: column; align-items: center; gap: .55rem; }
+.intro-mottos p {
+  margin: 0; padding-left: .28em;
+  font-family: inherit; font-weight: 600; font-size: clamp(1rem, 3.4vw, 1.55rem); line-height: 1.2;
+  letter-spacing: .28em; text-transform: uppercase; color: var(--intro-fg);
+  opacity: 0; transform: translateY(8px);
+  transition: opacity .45s ease, transform .45s ease;
+}
+.intro-mottos p span { color: var(--intro-red); }
+.intro-mottos p.on { opacity: 1; transform: none; }
+.intro-ecg {
+  display: block; width: min(100%, 1100px); height: 140px;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+.intro-skip {
+  position: absolute; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  background: none; border: 1px solid var(--intro-muted); border-radius: 999px;
+  color: var(--intro-muted); padding: .4rem .85rem; cursor: pointer;
+  font-family: inherit; font-weight: 500; font-size: .78rem; line-height: 1; letter-spacing: .1em; text-transform: uppercase;
+}
+.intro-skip:hover, .intro-skip:focus-visible { color: var(--intro-red); border-color: var(--intro-red); outline: none; }

@@ -4,6 +4,7 @@ project:
   resources:
     - files/
     - assets/effects.js
+    - assets/intro.js
 
 website:
   title: "Raghunandan Rajkumar"
@@ -35,8 +36,19 @@ format:
     theme:
       dark: [darkly, theme-dark.scss, styles.scss]
       light: [flatly, theme-light.scss, styles.scss]
+    include-in-header:
+      text: |
+        <script>
+          try {
+            if (!sessionStorage.getItem("introSeen") &&
+                !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+              document.documentElement.classList.add("intro-pending");
+            }
+          } catch (e) {}
+        </script>
     include-after-body:
       text: |
+        <script src="/assets/intro.js"></script>
         <script src="/assets/effects.js"></script>
     toc: false
     page-layout: full
