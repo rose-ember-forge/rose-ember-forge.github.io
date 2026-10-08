@@ -12,7 +12,7 @@ description: "Data scientist and analyst in Stockholm. Python, SQL, machine lear
 [Data Scientist · Data Analyst · Stockholm]{.role}
 
 ::: {.pitch}
-Physicist turned data scientist. I turn messy, real-world data into clear answers: from ten years of
+Physicist turned data scientist. I take messy, real-world data and get clear and meaningful answers to important questions: from ten years of
 Swedish job ads, Stockholm electricity prices and SL bus delays to EEG signals and climate simulations.
 
 I work in Python and SQL, build models with scikit-learn and PyTorch, and report in Power BI and
@@ -108,7 +108,7 @@ Details coming soon.
 
 ::: {.earlier}
 - **Physics-informed neural network for Greenland Ice Sheet melt** (Master's thesis, two-person team)<br>
-  [PyTorch model enforcing surface energy balance and Stokes flow constraints through the loss function.]{.meta}
+  [PyTorch model enforcing surface energy balance constraints through the loss function.]{.meta}
 - **EEG-based human emotion recognition** (published paper, research team)<br>
   [Entropy measures as features for classifying emotions from EEG signals. [Read the paper](https://doi.org/10.1186/s40708-021-00141-5)]{.meta}
 - **Hex Colour Cube**<br>
