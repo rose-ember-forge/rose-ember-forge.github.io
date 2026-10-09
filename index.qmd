@@ -13,12 +13,13 @@ body-classes: home
 [Data Scientist · Data Analyst · Stockholm]{.role}
 
 ::: {.pitch}
-Physicist turned data scientist. I take messy, real-world data and get clear and meaningful answers to important questions.
-
+Physicist turned data scientist. I take messy, real-world data and get clear and meaningful answers to important questions.  
 Check out the Projects section to see my work.
 
 I work in Python and SQL, build models with scikit-learn and PyTorch, and report in Power BI and
-Streamlit. MSc in AI for Health from Stockholm University (2026). English (C1) and Swedish (B1/B2).
+Streamlit.  
+MSc in AI for Health from Stockholm University (2026).  
+English (C1) and Swedish (B1/B2).
 :::
 
 :::
