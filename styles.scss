@@ -268,3 +268,5 @@ section.contact-footer {
 }
 .quarto-color-scheme-toggle { display: inline-flex; align-items: center; padding: .25rem .4rem !important; }
 .contact-list a { overflow-wrap: anywhere; }
+section.contact-footer .contact-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 640px) { section.contact-footer .contact-list { grid-template-columns: 1fr; } }
