@@ -230,3 +230,41 @@ main section.reveal {
 }
 main section.reveal.in { opacity: 1; transform: none; }
 html.nav-auto.past-hero body.home #quarto-header { transform: none !important; }
+
+// ---------- Opening screen: picture centred above the pitch, filling the first screen ----------
+body.home .hero {
+  flex-direction: column; justify-content: center; text-align: center;
+  gap: 1.75rem; min-height: 100vh; min-height: 100svh;
+  padding: 2.5rem 0 4.5rem; border-bottom: 0; position: relative;
+  img.avatar { width: clamp(170px, 26vh, 260px); height: clamp(170px, 26vh, 260px); }
+  .pitch { margin: 0 auto; text-align: center; }
+  .hero-actions > p { justify-content: center; }
+}
+body.home .hero > p { display: flex; justify-content: center; }
+
+// Scroll cue at the bottom of the opening screen
+.scroll-cue {
+  position: absolute; left: 50%; bottom: 1.25rem; transform: translateX(-50%);
+  color: $grey-mid; font-size: 1.6rem; line-height: 1;
+  animation: cue 2.2s ease-in-out infinite;
+  &:hover { color: $red; }
+}
+@keyframes cue { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 6px); } }
+@media (prefers-reduced-motion: reduce) { .scroll-cue { animation: none; } }
+
+// ---------- Contact, as the closing section of the home page ----------
+section.contact-footer {
+  margin-top: 3rem; padding-top: .5rem; border-top: 1px solid $line;
+  .contact-list {
+    display: grid; gap: .8rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+    li { margin-bottom: 0; min-width: 0; }
+  }
+}
+
+// ---------- Bigger theme toggle ----------
+.quarto-color-scheme-toggle .bi::before {
+  width: 1.6rem !important; height: 1.6rem !important; background-size: 1.6rem 1.6rem !important;
+}
+.quarto-color-scheme-toggle { display: inline-flex; align-items: center; padding: .25rem .4rem !important; }
+.contact-list a { overflow-wrap: anywhere; }

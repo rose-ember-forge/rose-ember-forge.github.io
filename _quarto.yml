@@ -20,14 +20,7 @@ website:
       - text: About
         href: index.qmd#about
       - text: Contact
-        href: contact.qmd
-    right:
-      - icon: github
-        href: https://github.com/rose-ember-forge
-        aria-label: GitHub
-      - icon: linkedin
-        href: https://www.linkedin.com/in/raghunandan-rajkumar
-        aria-label: LinkedIn
+        href: index.qmd#contact
   page-footer:
     left: "© 2026 Raghunandan Rajkumar"
     right: "Built with [Quarto](https://quarto.org)"
@@ -40,9 +33,9 @@ format:
     include-in-header:
       text: |
         <script>
-          // The About page moved onto the home page; send old links there
-          var movedPage = /\/about\.html$/.test(location.pathname);
-          if (movedPage) location.replace("./#about");
+          // About and Contact moved onto the home page; send old links there
+          var movedPage = location.pathname.match(/\/(about|contact)\.html$/);
+          if (movedPage) location.replace("./#" + movedPage[1]);
           document.documentElement.classList.add("nav-auto");
           try {
             if (!movedPage && !sessionStorage.getItem("introSeen") &&

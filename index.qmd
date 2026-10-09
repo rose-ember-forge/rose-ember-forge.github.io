@@ -23,9 +23,11 @@ Streamlit. MSc in AI for Health from Stockholm University (2026). English (C1) a
 ::: {.hero-actions}
 [See projects](#projects){.btn-red}
 [Download CV](files/Raghunandan_Rajkumar_CV.pdf){.btn-outline download="Raghunandan_Rajkumar_CV.pdf"}
-[Contact](contact.qmd){.btn-outline}
+[Contact](#contact){.btn-outline}
 :::
 :::
+
+[<i class="bi bi-chevron-down"></i>](#projects){.scroll-cue aria-label="Scroll to projects"}
 :::
 
 ## Projects {#projects .section-title}
@@ -175,3 +177,24 @@ check the edge cases, and explain the result so people can act on it.
 ## Languages {.section-title .narrow}
 
 English (C1) · Swedish (B1/B2) · Kannada · Malayalam · Hindi
+
+## Contact {#contact .section-title .contact-footer}
+
+I'm open to Data Scientist and Data Analyst roles in Stockholm and across Sweden.
+The fastest way to reach me is email.
+
+```{=html}
+<ul class="contact-list">
+  <li><i class="bi bi-envelope-fill"></i>
+    <div><span class="label">Email</span>
+      <a href="mailto:raghunandan.officialuse@gmail.com">raghunandan.officialuse@gmail.com</a></div></li>
+  <li><i class="bi bi-linkedin"></i>
+    <div><span class="label">LinkedIn</span>
+      <a href="https://www.linkedin.com/in/raghunandan-rajkumar">linkedin.com/in/raghunandan-rajkumar</a></div></li>
+  <li><i class="bi bi-github"></i>
+    <div><span class="label">GitHub</span>
+      <a href="https://github.com/rose-ember-forge">github.com/rose-ember-forge</a></div></li>
+  <li><i class="bi bi-geo-alt-fill"></i>
+    <div><span class="label">Location</span>Stockholm, Sweden</div></li>
+</ul>
+```

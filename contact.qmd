@@ -3,25 +3,4 @@ title: "Contact"
 description: "How to reach Raghunandan Rajkumar."
 ---
 
-::: {.page-narrow}
-
-I'm open to Data Scientist and Data Analyst roles in Stockholm and across Sweden.
-The fastest way to reach me is email.
-
-```{=html}
-<ul class="contact-list">
-  <li><i class="bi bi-envelope-fill"></i>
-    <div><span class="label">Email</span>
-      <a href="mailto:raghunandan.officialuse@gmail.com">raghunandan.officialuse@gmail.com</a></div></li>
-  <li><i class="bi bi-linkedin"></i>
-    <div><span class="label">LinkedIn</span>
-      <a href="https://www.linkedin.com/in/raghunandan-rajkumar">linkedin.com/in/raghunandan-rajkumar</a></div></li>
-  <li><i class="bi bi-github"></i>
-    <div><span class="label">GitHub</span>
-      <a href="https://github.com/rose-ember-forge">github.com/rose-ember-forge</a></div></li>
-  <li><i class="bi bi-geo-alt-fill"></i>
-    <div><span class="label">Location</span>Stockholm, Sweden</div></li>
-</ul>
-```
-
-:::
+Contact details now live at the end of the [home page](index.qmd#contact).
