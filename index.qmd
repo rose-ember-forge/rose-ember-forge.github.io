@@ -20,11 +20,6 @@ I work in Python and SQL, build models with scikit-learn and PyTorch, and report
 Streamlit. MSc in AI for Health from Stockholm University (2026). English (C1) and Swedish (B1/B2).
 :::
 
-::: {.hero-actions}
-[See projects](#projects){.btn-red}
-[Download CV](files/Raghunandan_Rajkumar_CV.pdf){.btn-outline download="Raghunandan_Rajkumar_CV.pdf"}
-[Contact](#contact){.btn-outline}
-:::
 :::
 
 [<i class="bi bi-chevron-down"></i>](#projects){.scroll-cue aria-label="Scroll to projects"}
