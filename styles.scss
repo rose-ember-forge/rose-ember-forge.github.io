@@ -1,5 +1,5 @@
 /*-- scss:rules --*/
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif+Display:wght@500;600;700&family=Noto+Sans+Mono:wght@400;500&display=swap");
 
 .navbar { border-bottom: 1px solid $line; }
 .navbar-title { font-weight: 700; letter-spacing: .01em; }
@@ -270,3 +270,14 @@ section.contact-footer {
 .contact-list a { overflow-wrap: anywhere; }
 section.contact-footer .contact-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (max-width: 640px) { section.contact-footer .contact-list { grid-template-columns: 1fr; } }
+
+// ---------- Type roles: Noto Serif Display headings, Noto Sans body, Noto Sans Mono details ----------
+.navbar-title, .hero h1 { font-family: $headings-font-family; }
+.hero h1 { font-weight: 700; letter-spacing: .005em; }
+.section-title, section.section-title > h2 { font-weight: 600; }
+.tag, .status, .when, .timeline .when { font-family: $font-family-monospace; }
+.tag { font-size: .76rem; }
+.status { letter-spacing: .04em; }
+// The intro's mottos are set like headings
+.intro-mottos p { font-family: $headings-font-family; font-weight: 600; }
+.status { font-weight: 500; }
