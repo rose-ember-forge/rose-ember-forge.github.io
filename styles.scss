@@ -274,7 +274,7 @@ section.contact-footer .contact-list { grid-template-columns: repeat(2, minmax(0
 // ---------- Type roles: Noto Serif Display headings, Noto Sans body, Noto Sans Mono details ----------
 .navbar-title, .hero h1 { font-family: $headings-font-family; }
 .hero h1 { font-weight: 700; letter-spacing: .005em; }
-.section-title, section.section-title > h2 { font-weight: 600; }
+section.section-title > h2, h2.section-title { font-weight: 600; }
 .tag, .status, .when, .timeline .when { font-family: $font-family-monospace; }
 .tag { font-size: .76rem; }
 .status { letter-spacing: .04em; }
