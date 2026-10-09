@@ -44,6 +44,13 @@
     var DRAW = 3.3, MOTTO = [0.95, 1.55, 2.15], EXIT = 3.45;
     var start = null, raf = 0, leaving = false;
 
+    // Show the mottos only once their font has arrived (or after 2 s at most), so they never swap fonts mid-fade
+    var fontReady = !(document.fonts && document.fonts.load);
+    if (!fontReady) {
+      document.fonts.load('500 1.5rem "Alegreya SC"').then(function () { fontReady = true; }, function () { fontReady = true; });
+      setTimeout(function () { fontReady = true; }, 2000);
+    }
+
     function frame(ts) {
       if (start === null) start = ts;
       var t = (ts - start) / 1000;
@@ -61,7 +68,7 @@
         ctx.shadowBlur = 18;
         ctx.beginPath(); ctx.arc(head, base - amp * trace(head), 3.5, 0, Math.PI * 2); ctx.fill();
       }
-      for (var i = 0; i < lines.length; i++) if (t >= MOTTO[i]) lines[i].classList.add("on");
+      for (var i = 0; i < lines.length; i++) if (fontReady && t >= MOTTO[i]) lines[i].classList.add("on");
       if (t >= EXIT) { leave(false); return; }
       raf = requestAnimationFrame(frame);
     }
