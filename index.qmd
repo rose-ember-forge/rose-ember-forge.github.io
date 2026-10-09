@@ -12,8 +12,8 @@ description: "Data scientist and analyst in Stockholm. Python, SQL, machine lear
 [Data Scientist · Data Analyst · Stockholm]{.role}
 
 ::: {.pitch}
-Physicist turned data scientist. I take messy, real-world data and get clear and meaningful answers to important questions: from ten years of
-Swedish job ads, Stockholm electricity prices and SL bus delays to EEG signals and climate simulations.
+Physicist turned data scientist. I take messy, real-world data and get clear and meaningful answers to important questions.
+Check out the Projects section to see my work.
 
 I work in Python and SQL, build models with scikit-learn and PyTorch, and report in Power BI and
 Streamlit. MSc in AI for Health from Stockholm University (2026). English (C1) and Swedish (B1/B2).
@@ -57,7 +57,7 @@ platforms and generative AI have replaced the old statistics toolkit; SQL stays 
 
 ### Forecasting tomorrow's electricity price in Stockholm
 
-Hourly day-ahead price forecasts for SE3, backtested on a full year using only what was known before the
+Hourly day-ahead price forecasts for SE3, back-tested on a full year using only what was known before the
 noon auction. Averaging a Lasso model (LEAR) and LightGBM with weather forecasts cuts the error by 44%
 against the standard benchmark. A daily GitHub Action makes and scores a live forecast.
 
