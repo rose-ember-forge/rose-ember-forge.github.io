@@ -5,6 +5,7 @@ project:
     - files/
     - assets/effects.js
     - assets/intro.js
+    - assets/layout.js
 
 website:
   title: "Raghunandan Rajkumar"
@@ -17,7 +18,7 @@ website:
       - text: Projects
         href: index.qmd#projects
       - text: About
-        href: about.qmd
+        href: index.qmd#about
       - text: Contact
         href: contact.qmd
     right:
@@ -39,8 +40,12 @@ format:
     include-in-header:
       text: |
         <script>
+          // The About page moved onto the home page; send old links there
+          var movedPage = /\/about\.html$/.test(location.pathname);
+          if (movedPage) location.replace("./#about");
+          document.documentElement.classList.add("nav-auto");
           try {
-            if (!sessionStorage.getItem("introSeen") &&
+            if (!movedPage && !sessionStorage.getItem("introSeen") &&
                 !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
               document.documentElement.classList.add("intro-pending");
             }
@@ -50,6 +55,7 @@ format:
       text: |
         <script src="/assets/intro.js"></script>
         <script src="/assets/effects.js"></script>
+        <script src="/assets/layout.js"></script>
     toc: false
     page-layout: full
     smooth-scroll: true

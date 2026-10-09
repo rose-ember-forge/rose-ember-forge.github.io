@@ -1,6 +1,7 @@
 ---
 pagetitle: "Raghunandan Rajkumar · Data Scientist"
 description: "Data scientist and analyst in Stockholm. Python, SQL, machine learning and clear reporting."
+body-classes: home
 ---
 
 ::: {.hero}
@@ -118,3 +119,59 @@ Details coming soon.
 - **SpaceX launch analysis** (IBM Data Science capstone)<br>
   [Data from a REST API and web scraping, SQL and Folium/Plotly EDA, four classifiers compared.]{.meta}
 :::
+
+## About {#about .section-title .narrow}
+
+I'm looking for **Data Scientist** and
+**Data Analyst** roles in Stockholm and elsewhere in Sweden.
+
+My background is research: three years modelling biological neural networks with deep learning, a
+published paper on emotion recognition from EEG, and a master's thesis on physics-informed neural networks
+for the Greenland Ice Sheet. Now I use the same rigour on business-shaped questions: clean the data,
+check the edge cases, and explain the result so people can act on it.
+
+[Download CV (PDF)](files/Raghunandan_Rajkumar_CV.pdf){.btn-red download="Raghunandan_Rajkumar_CV.pdf"}
+
+## Experience {.section-title .narrow}
+
+::: {.timeline}
+- **Research Scholar**, Department of Physics, Pondicherry University<br>
+  [Jul 2018 – Nov 2021 · Pondicherry, India]{.when}<br>
+  Led a three-year project using artificial and deep neural networks to model biological neural networks.
+  Analysed EEG datasets with entropy measures to recognise human emotions
+  ([published paper](https://doi.org/10.1186/s40708-021-00141-5)).
+- **Workshop Organiser**, Pondicherry University<br>
+  [2019 · Pondicherry, India]{.when}<br>
+  Designed and ran a LaTeX workshop for physics students, which led to department-wide adoption.
+- **Teacher**, Yuvaraja's College<br>
+  [2017 · Mysuru, India]{.when}<br>
+  Taught master's-level physics and C programming and mentored students through problem solving.
+:::
+
+## Education {.section-title .narrow}
+
+::: {.timeline}
+- **MSc in AI for Health**, Stockholm University<br>
+  [2024 – 2026 · Stockholm, Sweden]{.when}
+- **MSc in Physics**, Yuvaraja's College, University of Mysore<br>
+  [2016 – 2018 · Mysuru, India]{.when}
+- **BSc in Physics, Chemistry and Mathematics**, Yuvaraja's College, University of Mysore<br>
+  [2013 – 2016 · Mysuru, India]{.when}
+:::
+
+## Skills {.section-title .narrow}
+
+- **Languages:** Python, SQL, R, LaTeX, C
+- **Data science:** machine learning, deep learning, NLP, sentiment analysis, data visualisation
+- **Tools:** pandas, scikit-learn, LightGBM, PyTorch, DuckDB, Power BI, Streamlit, Plotly, Folium, Git
+
+## Certifications {.section-title .narrow}
+
+- Data Science for Engineers · NPTEL, IIT Madras (2022)
+- Data Science Professional Certificate · IBM via Coursera (2022)
+- Machine Learning · Stanford Online via Coursera (2021)
+- IELTS Academic · overall band 8.0, CEFR C1 (2022)
+
+## Languages {.section-title .narrow}
+
+English (C1) · Swedish (B1/B2) · Kannada · Malayalam · Hindi

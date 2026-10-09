@@ -214,3 +214,18 @@ html.intro-playing { overflow: hidden; }
   font-family: inherit; font-weight: 500; font-size: .78rem; line-height: 1; letter-spacing: .1em; text-transform: uppercase;
 }
 .intro-skip:hover, .intro-skip:focus-visible { color: var(--intro-red); border-color: var(--intro-red); outline: none; }
+
+// ---------- Home layout (assets/layout.js) ----------
+// Header stays hidden on the home page until the pitch has scrolled out of view
+body.home { padding-top: 0 !important; }
+body.home #quarto-header { transition: transform .3s ease; }
+html.nav-auto:not(.past-hero) body.home #quarto-header { transform: translateY(-100%) !important; }
+main section.level2 { scroll-margin-top: 4.5rem; }
+section.narrow { max-width: 760px; }
+
+// Sections fade in as they scroll into view
+main section.reveal {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+main section.reveal.in { opacity: 1; transform: none; }
