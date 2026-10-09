@@ -229,3 +229,4 @@ main section.reveal {
   transition: opacity .7s ease, transform .7s ease;
 }
 main section.reveal.in { opacity: 1; transform: none; }
+html.nav-auto.past-hero body.home #quarto-header { transform: none !important; }
