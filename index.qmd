@@ -161,7 +161,7 @@ check the edge cases, and explain the result so people can act on it.
 ## Skills {.section-title .narrow}
 
 - **Languages:** Python, SQL, R, LaTeX, C
-- **Data science:** machine learning, deep learning, NLP, sentiment analysis, data visualisation
+- **Data science:** machine learning, deep learning, data visualisation, NLP, sentiment analysis
 - **Tools:** pandas, scikit-learn, LightGBM, PyTorch, DuckDB, Power BI, Streamlit, Plotly, Folium, Git
 
 ## Certifications {.section-title .narrow}
