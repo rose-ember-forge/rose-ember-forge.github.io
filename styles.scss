@@ -1,5 +1,5 @@
 /*-- scss:rules --*/
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif+Display:wght@500;600;700&family=Noto+Sans+Mono:wght@400;500&family=Alegreya+SC:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Alegreya+SC:wght@500&display=swap");
 
 .navbar { border-bottom: 1px solid $line; }
 .navbar-title { font-weight: 700; letter-spacing: .01em; }
@@ -271,7 +271,7 @@ section.contact-footer {
 section.contact-footer .contact-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (max-width: 640px) { section.contact-footer .contact-list { grid-template-columns: 1fr; } }
 
-// ---------- Type roles: Noto Serif Display headings, Noto Sans body, Noto Sans Mono details ----------
+// ---------- Type roles: IBM Plex Serif headings, Plex Sans body, Plex Mono details ----------
 .navbar-title, .hero h1 { font-family: $headings-font-family; }
 .hero h1 { font-weight: 700; letter-spacing: .005em; }
 section.section-title > h2, h2.section-title { font-weight: 600; }
