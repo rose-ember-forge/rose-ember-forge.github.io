@@ -1,5 +1,5 @@
 ---
-pagetitle: "Raghunandan Rajkumar · Data Scientist"
+pagetitle: "Raghunandan's Portfolio"
 description: "Data scientist and analyst in Stockholm. Python, SQL, machine learning and clear reporting."
 body-classes: home
 ---
