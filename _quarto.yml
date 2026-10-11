@@ -8,12 +8,13 @@ project:
     - assets/layout.js
 
 website:
-  title: "Raghunandan Rajkumar"
+  title: "Raghunandan's Portfolio"
   description: "Data scientist and analyst in Stockholm. Python, SQL, machine learning and clear reporting."
   site-url: "https://rose-ember-forge.github.io"
   favicon: assets/favicon.png
   open-graph: true
   navbar:
+    title: "Raghunandan Rajkumar"
     left:
       - text: Projects
         href: index.qmd#projects
