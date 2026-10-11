@@ -1,4 +1,4 @@
-// Intro: an ECG trace with one heartbeat, the three mottos, a second heartbeat, then the page.
+// Intro: an ECG trace with three heartbeats about a second apart, the three mottos, then the page.
 // playIntro(done) builds the overlay, plays it once and calls done() when it is gone.
 // playIntro(done, true) is the replay: the curtain falls, the heartbeat loops and any click or key raises it.
 (function () {
@@ -39,11 +39,12 @@
     }
     function trace(x) {
       var w = Math.max(110, Math.min(W * 0.24, 300));
-      return beat(x, W * 0.17, w) + beat(x, W * 0.84, w);
+      return beat(x, W * 0.17, w) + beat(x, W * 0.5, w) + beat(x, W * 0.83, w);
     }
 
-    // Timeline in seconds: the trace crosses the screen in DRAW, mottos appear at MOTTO, then EXIT
-    var DRAW = 3.3, MOTTO = [0.95, 1.55, 2.15], EXIT = 3.45;
+    // Timeline in seconds: the trace crosses the screen in DRAW, mottos appear at MOTTO, then EXIT.
+    // The replay then wipes the trace away from left to right over FADE before sweeping again.
+    var DRAW = 3.3, MOTTO = [0.95, 1.55, 2.15], EXIT = 3.45, FADE = 1.2;
     var start = null, raf = 0, leaving = false;
 
     // Show the mottos only once their font has arrived (or after 2 s at most), so they never swap fonts mid-fade
@@ -70,11 +71,19 @@
         ctx.shadowBlur = 18;
         ctx.beginPath(); ctx.arc(head, base - amp * trace(head), 3.5, 0, Math.PI * 2); ctx.fill();
       }
+      if (hold && !still && t > EXIT) {
+        var band = W * 0.3, front = (t - EXIT) / FADE * (W + band);
+        var wipe = ctx.createLinearGradient(front - band, 0, front, 0);
+        wipe.addColorStop(0, "#000"); wipe.addColorStop(1, "rgba(0, 0, 0, 0)");
+        ctx.globalCompositeOperation = "destination-out"; ctx.shadowBlur = 0;
+        ctx.fillStyle = wipe; ctx.fillRect(0, 0, W, H);
+        ctx.globalCompositeOperation = "source-over";
+      }
       for (var i = 0; i < lines.length; i++) if (fontReady && t >= MOTTO[i]) lines[i].classList.add("on");
       if (t >= EXIT) {
         if (!hold) { leave(false); return; }
-        if (!still) start = ts;  // sweep the trace again, like a monitor
-        else if (fontReady) return;  // reduced motion: one still frame once the mottos are shown
+        if (still) { if (fontReady) return; }  // reduced motion: one still frame once the mottos are shown
+        else if (t >= EXIT + FADE) start = ts;  // sweep the trace again, like a monitor
       }
       raf = requestAnimationFrame(frame);
     }
