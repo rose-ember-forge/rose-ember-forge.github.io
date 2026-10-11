@@ -5,7 +5,9 @@ body-classes: home
 ---
 
 ::: {.hero}
-![](assets/avatar.png){.avatar fig-alt="Profile illustration: black suit with a red tie"}
+<button class="avatar-btn" type="button" aria-label="Replay the intro">
+<img class="avatar" src="assets/avatar.png" alt="Profile illustration: black suit with a red tie">
+</button>
 
 ::: {.hero-text}
 # Raghunandan Rajkumar

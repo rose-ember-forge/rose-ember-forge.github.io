@@ -1,14 +1,16 @@
 // Intro: an ECG trace with one heartbeat, the three mottos, a second heartbeat, then the page.
 // playIntro(done) builds the overlay, plays it once and calls done() when it is gone.
+// playIntro(done, true) is the replay: the curtain falls, the heartbeat loops and any click or key raises it.
 (function () {
-  function playIntro(done) {
+  function playIntro(done, hold) {
+    var still = hold && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var root = document.createElement("div");
-    root.className = "intro";
+    root.className = "intro" + (hold && !still ? " exit" : "");
     root.innerHTML =
       '<div class="intro-mottos" aria-hidden="true">' +
       "<p><span>Semper</span> Verus</p><p><span>Semper</span> Fidus</p><p><span>Semper</span> Discens</p>" +
       '</div><canvas class="intro-ecg" aria-hidden="true"></canvas>' +
-      '<button class="intro-skip" type="button">Skip</button>';
+      '<button class="intro-skip" type="button">' + (hold ? "Close" : "Skip") + "</button>";
     document.body.appendChild(root);
 
     var canvas = root.querySelector("canvas");
@@ -52,7 +54,7 @@
     }
 
     function frame(ts) {
-      if (start === null) start = ts;
+      if (start === null) start = still ? ts - EXIT * 1000 : ts;
       var t = (ts - start) / 1000;
       var head = Math.min(1, t / DRAW) * W, base = H * 0.72, amp = H * 0.62;
       ctx.clearRect(0, 0, W, H);
@@ -69,7 +71,11 @@
         ctx.beginPath(); ctx.arc(head, base - amp * trace(head), 3.5, 0, Math.PI * 2); ctx.fill();
       }
       for (var i = 0; i < lines.length; i++) if (fontReady && t >= MOTTO[i]) lines[i].classList.add("on");
-      if (t >= EXIT) { leave(false); return; }
+      if (t >= EXIT) {
+        if (!hold) { leave(false); return; }
+        if (!still) start = ts;  // sweep the trace again, like a monitor
+        else if (fontReady) return;  // reduced motion: one still frame once the mottos are shown
+      }
       raf = requestAnimationFrame(frame);
     }
 
@@ -77,15 +83,31 @@
       if (leaving) return;
       leaving = true;
       cancelAnimationFrame(raf);
-      root.classList.add(skipped ? "skip" : "exit");
+      root.classList.add(skipped || still ? "skip" : "exit");
+      document.removeEventListener("keydown", onKey);
+      document.removeEventListener("click", onClick, true);
       setTimeout(function () {
         window.removeEventListener("resize", size);
         root.remove();
         if (done) done();
-      }, skipped ? 260 : 650);
+      }, still ? 0 : skipped ? 260 : 650);
     }
+    function onKey(e) { if (!e.repeat) leave(false); }
+    function onClick(e) { e.preventDefault(); e.stopPropagation(); leave(false); }
     // Only the Skip button skips, so a stray click or key press cannot cut the intro short
-    root.querySelector(".intro-skip").addEventListener("click", function () { leave(true); });
+    // The replay closes on any click or key, but listens only after the press that opened it has finished
+    if (hold) {
+      root.offsetWidth;  // commit the raised curtain so it animates down
+      root.classList.remove("exit");
+      root.querySelector(".intro-skip").focus({ preventScroll: true });
+      setTimeout(function () {
+        if (leaving) return;
+        document.addEventListener("keydown", onKey);
+        document.addEventListener("click", onClick, true);
+      }, 0);
+    } else {
+      root.querySelector(".intro-skip").addEventListener("click", function () { leave(true); });
+    }
     raf = requestAnimationFrame(frame);
   }
   window.playIntro = playIntro;
@@ -101,4 +123,19 @@
   html.classList.add("intro-playing");
   window.playIntro(function () { html.classList.remove("intro-playing"); });
   html.classList.remove("intro-pending");
+})();
+
+// The profile picture replays the intro
+(function () {
+  var btn = document.querySelector(".avatar-btn");
+  if (!btn) return;
+  var html = document.documentElement;
+  btn.addEventListener("click", function () {
+    if (html.classList.contains("intro-playing")) return;
+    html.classList.add("intro-playing");
+    window.playIntro(function () {
+      html.classList.remove("intro-playing");
+      btn.focus({ preventScroll: true });
+    }, true);
+  });
 })();
