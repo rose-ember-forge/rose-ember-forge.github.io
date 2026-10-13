@@ -31,7 +31,7 @@ I wanted something simple to maintain that still felt like mine, so:
 - The look is my own SCSS on top of Bootstrap: black, red and grey, with light and dark modes.
 - Type is IBM Plex (Serif for headings, Sans for text, Mono for details), with Alegreya SC for the mottos.
 - The opening screen plays a short ECG heartbeat with three mottos I try to live by:
-  *Semper Verus, Semper Fidus, Semper Discens* (always true, always faithful, always learning).
+  *Semper Verus, Semper Fidus, Semper Discens* (always true, always loyal, always learning).
   Click my picture to see it again.
 - It is hosted on GitHub Pages and deployed by a GitHub Actions workflow whenever `main` changes.
 
