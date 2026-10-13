@@ -132,7 +132,7 @@ h2 { border-bottom: 0 !important; }
     padding: 1.5rem 0 2rem;
     img.avatar { width: 128px; height: 128px; }
     .role { font-size: 1.02rem; }
-    .pitch { font-size: 1rem; text-align: left; }
+    .pitch { font-size: 18px; text-align: left; }
   }
   .hero-actions > p { justify-content: center; }
   .hero-actions a { flex: 1 1 140px; }
@@ -245,16 +245,24 @@ html.nav-auto.past-hero body.home #quarto-header { transform: none !important; }
 body.home .hero {
   flex-direction: column; justify-content: center; text-align: center;
   gap: 1.75rem; min-height: 100vh; min-height: 100svh;
-  padding: 2.5rem 0 4.5rem; border-bottom: 0; position: relative;
+  padding: 2.5rem 0 6.5rem; border-bottom: 0; position: relative;
   img.avatar { width: clamp(170px, 26vh, 260px); height: clamp(170px, 26vh, 260px); }
   .pitch { margin: 0 auto; text-align: center; }
   .hero-actions > p { justify-content: center; }
 }
 body.home .hero > p { display: flex; justify-content: center; }
+// Quarto's empty title block and the page's top padding pushed the opening screen 30px down, putting the arrow below the fold
+body.home #title-block-header { display: none; }
+body.home #quarto-document-content { padding-top: 0; }
+
+// Desktop: everything from Projects down reads 20% larger. zoom scales the rem-based sizes and spacing together.
+@media (min-width: 992px) {
+  body.home main section.level2 { zoom: 1.2; }
+}
 
 // Scroll cue at the bottom of the opening screen
 .scroll-cue {
-  position: absolute; left: 50%; bottom: 1.25rem; transform: translateX(-50%);
+  position: absolute; left: 50%; bottom: 3.25rem; transform: translateX(-50%);
   color: $grey-mid; font-size: 1.6rem; line-height: 1;
   animation: cue 2.2s ease-in-out infinite;
   &:hover { color: $red; }
