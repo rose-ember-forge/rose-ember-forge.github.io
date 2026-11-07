@@ -53,26 +53,6 @@ platforms and generative AI have replaced the old statistics toolkit; SQL stays 
 :::
 
 ::: {.card-project}
-![](assets/electricity-forecast.png){fig-alt="Model comparison: averaging LEAR and LightGBM cuts the forecast error by 44% against the naive benchmark"}
-
-[Finished]{.status .done}
-
-### Forecasting tomorrow's electricity price in Stockholm
-
-Hourly day-ahead price forecasts for SE3, back-tested on a full year using only what was known before the
-noon auction. Averaging a Lasso model (LEAR) and LightGBM with weather forecasts cuts the error by 44%
-against the standard benchmark. A daily GitHub Action makes and scores a live forecast.
-
-::: {.tags}
-[Python]{.tag} [LightGBM]{.tag} [Lasso]{.tag} [Time series]{.tag} [Conformal intervals]{.tag} [DuckDB / SQL]{.tag} [Streamlit]{.tag}
-:::
-
-::: {.card-links}
-[Code on GitHub →](https://github.com/rose-ember-forge/Forecasting-Electricity-Prices-in-Stockholm)
-:::
-:::
-
-::: {.card-project}
 ![](assets/sl-delays.png){fig-alt="Model comparison: SL plus history has a mean error of 67 seconds against 89 seconds for SL's own live prediction"}
 
 [Finished]{.status .done}
@@ -93,15 +73,39 @@ A LightGBM model makes SL's own live delay predictions 25% more accurate.
 :::
 
 ::: {.card-project}
-[In progress]{.status .wip}
+![](assets/electricity-forecast.png){fig-alt="Model comparison: averaging LEAR and LightGBM cuts the forecast error by 44% against the naive benchmark"}
 
-### Project 4
+[Finished]{.status .done}
 
-Details coming soon.
+### Forecasting tomorrow's electricity price in Stockholm
+
+Hourly day-ahead price forecasts for SE3, back-tested on a full year using only what was known before the
+noon auction. Averaging a Lasso model (LEAR) and LightGBM with weather forecasts cuts the error by 44%
+against the standard benchmark. A daily GitHub Action makes and scores a live forecast.
 
 ::: {.tags}
+[Python]{.tag} [LightGBM]{.tag} [Lasso]{.tag} [Time series]{.tag} [Conformal intervals]{.tag} [DuckDB / SQL]{.tag} [Streamlit]{.tag}
+:::
+
+::: {.card-links}
+[Code on GitHub →](https://github.com/rose-ember-forge/Forecasting-Electricity-Prices-in-Stockholm)
+:::
+:::
+
+::: {.card-project}
+[In progress]{.status .wip}
+
+### ThemeForge
+
+A collection of modern themes for LaTeX beamer. The themes are free for use and open source, with LPPL license.
+
+::: {.tags}
+[LaTeX]{.tag} [HTML]{.tag} [CSS]{.tag} [JS]{.tag} 
+
 [In progress]{.tag}
 :::
+::: {.card-links}
+[Code on GitHub →]()
 :::
 
 :::
