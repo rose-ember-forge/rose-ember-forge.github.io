@@ -110,6 +110,8 @@ A collection of modern themes for LaTeX beamer. The themes are free for use and 
 
 :::
 
+:::
+
 ## Earlier work {.section-title}
 
 ::: {.earlier}
