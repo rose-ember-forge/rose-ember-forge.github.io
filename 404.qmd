@@ -1,0 +1,21 @@
+---
+pagetitle: "Page not found"
+body-classes: page-404
+---
+
+```{=html}
+<script>document.documentElement.classList.remove("intro-pending");</script>
+<div class="notfound">
+<svg class="nf-ecg" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+<path pathLength="1" d="M0 95.0 L500 95.0 L502 94.9 L504 94.9 L506 94.8 L508 94.6 L510 94.3 L512 93.8 L514 93.2 L516 92.4 L518 91.5 L520 90.5 L522 89.5 L524 88.7 L526 88.2 L528 88.0 L530 88.2 L532 88.7 L534 89.5 L536 90.5 L538 91.5 L540 92.4 L542 93.2 L544 93.8 L546 94.3 L548 94.6 L550 94.8 L552 94.9 L554 94.9 L556 95.0 L580 95.0 L582 95.1 L584 95.6 L586 97.8 L588 101.2 L590 101.5 L592 97.6 L594 89.8 L596 71.5 L598 41.6 L600 25.0 L602 41.7 L604 72.3 L606 93.3 L608 106.4 L610 115.0 L612 114.0 L614 105.5 L616 98.4 L618 95.6 L620 95.1 L622 95.0 L630 95.0 L632 94.9 L634 94.9 L636 94.8 L638 94.7 L640 94.6 L642 94.4 L644 94.0 L646 93.6 L648 93.0 L650 92.2 L652 91.3 L654 90.1 L656 88.8 L658 87.3 L660 85.8 L662 84.2 L664 82.7 L666 81.4 L668 80.4 L670 79.8 L672 79.6 L674 79.8 L676 80.4 L678 81.4 L680 82.7 L682 84.2 L684 85.8 L686 87.3 L688 88.8 L690 90.1 L692 91.3 L694 92.2 L696 93.0 L698 93.6 L700 94.0 L702 94.4 L704 94.6 L706 94.7 L708 94.8 L710 94.9 L712 94.9 L714 95.0 L1000 95.0"/>
+</svg>
+<h1 class="nf-code"><span class="visually-hidden">Error </span>404</h1>
+<p class="nf-line">This page is an outlier.</p>
+<p class="nf-note">The link may be old, or the page has moved.</p>
+<div class="nf-actions">
+<a class="btn-red" href="/">Back to home</a>
+<a class="btn-outline" href="/#projects">See projects</a>
+<a class="btn-outline" href="/#contact">Get in touch</a>
+</div>
+</div>
+```
