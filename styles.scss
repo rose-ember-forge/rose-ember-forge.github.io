@@ -305,3 +305,39 @@ section.section-title > h2, h2.section-title { font-weight: 600; }
   text-transform: none; letter-spacing: .12em; font-size: clamp(1.15rem, 3.8vw, 1.8rem);
 }
 .status { font-weight: 500; }
+
+// ---------- 404 page ----------
+// The intro never plays here (404.qmd clears intro-pending). The plot animates in three steps:
+// the dots appear one by one, the ring groups them, then the red outlier appears.
+.notfound {
+  min-height: calc(100vh - 220px); padding: 2rem 0 3rem;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+}
+.nf-plot { display: block; width: min(100%, 560px); height: auto; overflow: visible; }
+.nf-axes { fill: none; stroke: $line; stroke-width: 1.5; }
+.nf-dot { fill: $grey-mid; opacity: 0; transform-box: fill-box; transform-origin: center;
+  animation: nf-pop .3s calc(.3s + var(--i) * .07s) ease-out forwards; }
+.nf-group { fill: rgba($grey-mid, .06); stroke: $grey-mid; stroke-width: 1.5; stroke-dasharray: 5 5;
+  opacity: 0; transform-box: fill-box; transform-origin: center; animation: nf-pop .6s 2.5s ease-out forwards; }
+.nf-label { font-family: $font-family-monospace; font-size: 17px; opacity: 0; animation: nf-fade .5s ease-out forwards; }
+.nf-group-label { fill: $grey-mid; animation-delay: 2.9s; }
+.nf-outlier { fill: $red; filter: drop-shadow(0 0 5px rgba($red, .6)); opacity: 0;
+  transform-box: fill-box; transform-origin: center; animation: nf-pop .4s 3.6s cubic-bezier(.3, 1.6, .5, 1) forwards; }
+.nf-pointer { fill: none; stroke: $red; stroke-width: 1.5; opacity: 0; animation: nf-fade .4s 4s ease-out forwards; }
+.nf-you-label { fill: $red; font-weight: 500; animation-delay: 4.1s; }
+@keyframes nf-pop { from { opacity: 0; transform: scale(.3); } to { opacity: 1; transform: none; } }
+@keyframes nf-fade { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .nf-plot * { animation: none; opacity: 1; } }
+.nf-code {
+  font-family: $headings-font-family; font-weight: 700; color: $red;
+  font-size: clamp(4.5rem, 14vw, 8rem); line-height: 1; margin: 1.25rem 0 .5rem; border: 0;
+}
+.nf-line {
+  font-family: "Alegreya SC", $headings-font-family; font-weight: 500; color: $heading;
+  font-size: clamp(1.35rem, 4vw, 1.9rem); letter-spacing: .06em; margin: 0 0 .4rem;
+}
+.nf-note { color: $grey-mid; margin: 0 0 1.75rem; }
+.nf-actions {
+  display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center;
+  @media (max-width: 720px) { flex-direction: column; width: 100%; max-width: 320px; }
+}
