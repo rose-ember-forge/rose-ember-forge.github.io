@@ -93,6 +93,7 @@ against the standard benchmark. A daily GitHub Action makes and scores a live fo
 :::
 
 ::: {.card-project}
+![](assets/placeholder_img.png){fig-alt="Placeholder image that says 'loading'"}
 [In progress]{.status .wip}
 
 ### ThemeForge
