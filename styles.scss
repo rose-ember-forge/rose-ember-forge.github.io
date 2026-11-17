@@ -362,12 +362,7 @@ body { cursor: default; }
 input, textarea, [contenteditable] { cursor: text; }
 
 // ---------- Desktop: section snapping and a sticky About column ----------
-// Gentle ("proximity") snapping: the page settles on the hero, Projects, About or Contact only when a scroll
-// stops near one of them; long sections scroll freely. Off on phones and with reduced motion.
-@media (min-width: 992px) and (prefers-reduced-motion: no-preference) {
-  html:has(body.home) { scroll-snap-type: y proximity; }
-  body.home .hero, body.home #projects, body.home .about-wrap, body.home section.contact-footer { scroll-snap-align: start; }
-}
+// Snapping itself is in assets/layout.js; here: the sticky About column and a full-screen Contact
 @media (min-width: 992px) {
   body.home .about-wrap { scroll-margin-top: 4.5rem; }
   // About text and CV button stay in view on the left while Experience to Languages scroll past on the right
@@ -380,8 +375,10 @@ input, textarea, [contenteditable] { cursor: text; }
   @media (min-height: 700px) {
     body.home .about-wrap > section#about { position: sticky; top: 3.75rem; }
   }
-  // Contact fills the last screen, like the hero fills the first (divided by the 1.2 desktop zoom)
+  // Contact and the page footer together fill the last screen, like the hero fills the first:
+  // screen minus header (4.5rem) minus footer and its gap (8rem), divided by the 1.2 desktop zoom
   body.home section.contact-footer {
-    min-height: calc((100svh - 4.5rem) / 1.2); display: flex; flex-direction: column; justify-content: center;
+    min-height: calc((100svh - 12.5rem) / 1.2); display: flex; flex-direction: column; justify-content: center;
+    > h2 { margin-top: 0; }
   }
 }
