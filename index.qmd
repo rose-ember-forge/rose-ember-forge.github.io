@@ -93,7 +93,7 @@ against the standard benchmark. A daily GitHub Action makes and scores a live fo
 :::
 
 ::: {.card-project}
-[![](assets/placeholder_img.png){fig-alt="Placeholder image that says 'loading'"}](https://rose-ember-forge.github.io/ThemeForge/){target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"}
+[![](assets/themeforge_card.png){fig-alt="ThemeForge logo: a purple slide resting on a black anvil, next to the name ThemeForge in a dark serif font, with a large faded copy of the anvil behind it"}](https://rose-ember-forge.github.io/ThemeForge/){target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"}
 [In progress]{.status .wip}
 
 ### [ThemeForge](https://rose-ember-forge.github.io/ThemeForge/){target="_blank" rel="noopener"}
