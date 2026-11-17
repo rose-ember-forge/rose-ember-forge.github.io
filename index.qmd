@@ -34,6 +34,25 @@ English (C1) and Swedish (B1/B2).
 ::: {.cards}
 
 ::: {.card-project}
+[![](assets/themeforge_card.png){fig-alt="ThemeForge logo: a purple slide resting on a black anvil, next to the name ThemeForge in a dark serif font, with a large faded copy of the anvil behind it"}](https://rose-ember-forge.github.io/ThemeForge/){target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"}
+[Ongoing]{.status .ongoing}
+
+### [ThemeForge](https://rose-ember-forge.github.io/ThemeForge/){target="_blank" rel="noopener"}
+
+A collection of modern themes for LaTeX beamer. The themes are free for use and open source, with LPPL license.
+
+::: {.tags}
+[LaTeX]{.tag} [HTML]{.tag} [CSS]{.tag} [JS]{.tag} 
+
+[In progress]{.tag}
+:::
+::: {.card-links}
+[Code on GitHub →](https://github.com/rose-ember-forge/ThemeForge)
+:::
+
+:::
+
+::: {.card-project}
 ![](assets/skill-trends.png){fig-alt="Biggest risers and fallers among skills in Swedish data job ads"}
 
 [Finished]{.status .done}
@@ -92,24 +111,6 @@ against the standard benchmark. A daily GitHub Action makes and scores a live fo
 :::
 :::
 
-::: {.card-project}
-[![](assets/themeforge_card.png){fig-alt="ThemeForge logo: a purple slide resting on a black anvil, next to the name ThemeForge in a dark serif font, with a large faded copy of the anvil behind it"}](https://rose-ember-forge.github.io/ThemeForge/){target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"}
-[In progress]{.status .wip}
-
-### [ThemeForge](https://rose-ember-forge.github.io/ThemeForge/){target="_blank" rel="noopener"}
-
-A collection of modern themes for LaTeX beamer. The themes are free for use and open source, with LPPL license.
-
-::: {.tags}
-[LaTeX]{.tag} [HTML]{.tag} [CSS]{.tag} [JS]{.tag} 
-
-[In progress]{.tag}
-:::
-::: {.card-links}
-[Code on GitHub →](https://github.com/rose-ember-forge/ThemeForge)
-:::
-
-:::
 
 :::
 
