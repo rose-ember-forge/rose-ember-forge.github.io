@@ -129,6 +129,8 @@ against the standard benchmark. A daily GitHub Action makes and scores a live fo
   [Data from a REST API and web scraping, SQL and Folium/Plotly EDA, four classifiers compared.]{.meta}
 :::
 
+::: {.about-wrap}
+
 ## About {#about .section-title .narrow}
 
 I'm looking for **Data Scientist** and
@@ -184,6 +186,8 @@ check the edge cases, and explain the result so people can act on it.
 ## Languages {.section-title .narrow}
 
 English (C1) · Swedish (B1/B2) · Kannada · Malayalam · Hindi
+
+:::
 
 ## Contact {#contact .section-title .contact-footer}
 

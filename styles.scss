@@ -360,3 +360,25 @@ section.section-title > h2, h2.section-title { font-weight: 600; }
 // Plain arrow over text (selecting and copying still work); links keep the hand, typing fields keep the I-bar
 body { cursor: default; }
 input, textarea, [contenteditable] { cursor: text; }
+
+// ---------- Desktop: section snapping and a sticky About column ----------
+// Snapping itself is in assets/layout.js; here: the sticky About column and a full-screen Contact
+@media (min-width: 992px) {
+  body.home .about-wrap { scroll-margin-top: 4.5rem; }
+  // About text and CV button stay in view on the left while Experience to Languages scroll past on the right
+  body.home .about-wrap {
+    display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: 3.5rem;
+    > section { max-width: none; grid-column: 2; }
+    > section#about { grid-column: 1; grid-row: 1 / span 5; align-self: start; }
+  }
+  // Only on screens tall enough to show all of it, so the CV button is never cut off
+  @media (min-height: 700px) {
+    body.home .about-wrap > section#about { position: sticky; top: 3.75rem; }
+  }
+  // Contact and the page footer together fill the last screen, like the hero fills the first:
+  // screen minus header (4.5rem) minus footer and its gap (8rem), divided by the 1.2 desktop zoom
+  body.home section.contact-footer {
+    min-height: calc((100svh - 12.5rem) / 1.2); display: flex; flex-direction: column; justify-content: center;
+    > h2 { margin-top: 0; }
+  }
+}
