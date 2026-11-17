@@ -69,7 +69,6 @@ h2 { border-bottom: 0 !important; }
   background: $panel; border: 1px solid $line; border-radius: 10px;
   padding: 1.4rem 1.4rem 1.2rem; display: flex; flex-direction: column;
   transition: border-color .15s ease, transform .15s ease;
-  &:hover { border-color: $red; transform: translateY(-2px); }
   // Quarto wraps everything after the ### heading in a section; it must fill the card so the links can sit at its bottom
   > section { flex: 1; display: flex; flex-direction: column; }
   h3 { font-size: 1.2rem; font-weight: 700; margin: .4rem 0 .6rem; color: $heading; }
@@ -81,6 +80,7 @@ h2 { border-bottom: 0 !important; }
   display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .06em;
   text-transform: uppercase; padding: .18rem .55rem; border-radius: 999px;
   &.done     { background: rgba($red, .15); color: $red-soft; border: 1px solid rgba($red, .5); }
+  &.ongoing     { background: rgba($red, .15); color: $red-soft; border: 1px dashed rgba($red, .5); }
   &.wip     { background: rgba($grey-mid, .12); color: $grey-mid; border: 1px dashed $grey-mid; }
 }
 .tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1rem; }
@@ -342,9 +342,19 @@ section.section-title > h2, h2.section-title { font-weight: 600; }
   @media (max-width: 720px) { flex-direction: column; width: 100%; max-width: 320px; }
 }
 
-// A card whose project has a website links its title and image there; the image link is mouse-only (tabindex -1, aria-hidden), the title carries it for keyboards and screen readers
-.card-project h3 a { color: inherit; text-decoration: none;
-  &:hover, &:focus-visible { color: $red; text-decoration: underline; text-underline-offset: .2em; }
+// Clickable cards: give a card's ### title a link (to its website) and the whole card becomes that link.
+// The title link stretches over the card with ::after, so keyboards and screen readers meet one link;
+// "Code on GitHub" sits above the overlay and keeps its own target. Cards without a title link don't react to hover.
+.card-project:has(h3 a:not(.anchorjs-link)) {
+  position: relative;
+  &:hover { border-color: $red; transform: translateY(-2px); }
+  &:hover h3 a { color: $red; }
+  &:has(h3 a:focus-visible) { outline: 3px solid $red; outline-offset: 3px; }
+  h3 a { color: inherit; font-weight: inherit; text-decoration: none; outline: none;
+    &::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
+  }
+  .card-links a { position: relative; z-index: 2; }
+  @media (prefers-reduced-motion: reduce) { &:hover { transform: none; } }
 }
-.card-project > p > a img, .card-project > a img { transition: border-color .15s ease, opacity .15s ease; }
-.card-project a:hover img { border-color: $red; opacity: .9; }
+// Quarto's hover anchor icon on headings; on the cards it only scrolled the page
+.card-project .anchorjs-link { display: none !important; }
