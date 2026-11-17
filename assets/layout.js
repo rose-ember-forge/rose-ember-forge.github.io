@@ -1,8 +1,8 @@
-// Home page layout: the header appears once the pitch has scrolled out of view,
+// Home page layout: the header appears once the name has scrolled out of view,
 // and each section fades in as it scrolls into view.
 (function () {
   var html = document.documentElement;
-  var hero = document.querySelector(".hero");
+  var hero = document.querySelector(".hero h1");
   if (hero && "IntersectionObserver" in window) {
     new IntersectionObserver(function (entries) {
       var e = entries[0];

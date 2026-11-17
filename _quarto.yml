@@ -51,6 +51,7 @@ format:
         <script src="/assets/effects.js"></script>
         <script src="/assets/layout.js"></script>
     toc: false
+    anchor-sections: false
     page-layout: full
     smooth-scroll: true
     link-external-newwindow: true
