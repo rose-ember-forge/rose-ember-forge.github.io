@@ -356,3 +356,7 @@ section.section-title > h2, h2.section-title { font-weight: 600; }
   .card-links a { position: relative; z-index: 2; }
   @media (prefers-reduced-motion: reduce) { &:hover { transform: none; } }
 }
+
+// Plain arrow over text (selecting and copying still work); links keep the hand, typing fields keep the I-bar
+body { cursor: default; }
+input, textarea, [contenteditable] { cursor: text; }
