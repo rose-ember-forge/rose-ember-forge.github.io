@@ -345,7 +345,7 @@ section.section-title > h2, h2.section-title { font-weight: 600; }
 // Clickable cards: give a card's ### title a link (to its website) and the whole card becomes that link.
 // The title link stretches over the card with ::after, so keyboards and screen readers meet one link;
 // "Code on GitHub" sits above the overlay and keeps its own target. Cards without a title link don't react to hover.
-.card-project:has(h3 a:not(.anchorjs-link)) {
+.card-project:has(h3 a) {
   position: relative;
   &:hover { border-color: $red; transform: translateY(-2px); }
   &:hover h3 a { color: $red; }
@@ -356,5 +356,3 @@ section.section-title > h2, h2.section-title { font-weight: 600; }
   .card-links a { position: relative; z-index: 2; }
   @media (prefers-reduced-motion: reduce) { &:hover { transform: none; } }
 }
-// Quarto's hover anchor icon on headings; on the cards it only scrolled the page
-.card-project .anchorjs-link { display: none !important; }
